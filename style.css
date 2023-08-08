@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto&display=swap');
+
+:root {
+    --logo-font-family: 'Concert One', cursive;
+    --general-font-family: 'Roboto', Oxygen, Ubuntu, 'Open Sans', 'Helvetica', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: var(--logo-font-family);
+    color: white;
+    background-image: url(images/kanashi-cat.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: min(30vh, 300px);
+    text-align: center;
+}
+
+.logo, .title {
+}
+
+.logo {
+    filter: brightness(0) invert(1);
+}
