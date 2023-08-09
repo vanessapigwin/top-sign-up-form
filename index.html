@@ -22,18 +22,18 @@
             </p>
             <p>Sign up today for a free 3-day trial.</p>
         </div>
-        <div class="form">
+        <form class="form">
             <div class="form-row">
-                <label for="first_name" aria-required="true">First Name</label>
-                <input type="text" name="first-name" id="first-name">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required>
             </div>
             <div class="form-row">
-                <label for="last-name" aria-required="true">Last Name</label>
-                <input type="text" name="last-name" id="last-name">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
             </div>
             <div class="form-row">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div class="form-row">
                 <label for="phone">Phone Number</label>
@@ -41,16 +41,14 @@
             </div>
             <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
             <div class="form-row">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password">
+                <input type="password" name="confirm-password" id="confirm-password" required>
             </div>
-            <div class="form-row">
-                <input type="submit" value="Create Account">
-            </div>
-        </div>
+            <button type="submit">Create Account</button>
+        </form>
         <div class="registered">
             Already have an account? <a href="#">Log In</a>
         </div>
