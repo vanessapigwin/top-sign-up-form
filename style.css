@@ -1,29 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&family=Roboto&display=swap');
 
 :root {
-    --logo-font-family: 'Concert One', cursive;
+    --logo-font-family: 'Preahvihear', sans-serif;
     --general-font-family: 'Roboto', Oxygen, Ubuntu, 'Open Sans', 'Helvetica', sans-serif;
+    --primary-clr:#39AEC9;
+    --light-primary-clr: #CEEAF3;
+    --action-clr: #C1666B;
+    --light-action-clr: #EDD4D5;
+    --black-clr: #151316;
+    --gray-clr: #736878;
+    --light-gray-clr: #F5F4F6;
+    --white-clr: #fff;
+    --padding: 1em;
+    --margin: 1em;
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--general-font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: var(--padding);
+    margin-top: var(--margin);
 }
 
 .header {
     font-family: var(--logo-font-family);
-    color: white;
-    background-image: url(images/kanashi-cat.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    min-height: min(30vh, 300px);
-    text-align: center;
-}
-
-.logo, .title {
+    color:var(--gray-clr);
+    font-weight: bold;
 }
 
 .logo {
-    filter: brightness(0) invert(1);
+    width: 4em;
+    height: 4em;
+    background-image: url(images/icon-gray.png);
+    background-position: center;
+    background-size: contain;
+    flex: none;
+}
+
+.title {
+    font-size: 1.8em;
+    flex: 1 0 auto;
+}
+
+.pitch {
+    padding: var(--padding);
+    color: var(--gray-clr);
+    font-size: 1em;
+    background-color: var(--light-gray-clr);
+}
+
+.content {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    .header {
+        background-image: url(images/kanashi-cat.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: max(30%, 300px)
+    }
+
+    .logo-title {
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    .content {
+        flex: 1;
+    }
 }
