@@ -7,13 +7,17 @@
     --light-primary-clr: #CEEAF3;
     --action-clr: #C1666B;
     --light-action-clr: #EDD4D5;
-    --black-clr: #151316;
-    --gray-clr: #736878;
+    --gray-clr: #695F6D;
     --light-gray-clr: #F5F4F6;
     --white-clr: #fff;
     --padding: 1em;
-    --margin: 1em;
+    --section-padding: 2em;
+    --margin: 1.5em;
 }
+
+/* * {
+    border: solid 1px red;
+} */
 
 body {
     margin: 0;
@@ -29,14 +33,21 @@ body {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding: var(--padding);
+    padding: 0 var(--padding);
     margin-top: var(--margin);
+    background-color: rgba(255,255,255,0.5);
 }
 
 .header {
     font-family: var(--logo-font-family);
     color:var(--gray-clr);
     font-weight: bold;
+    background-image: url(images/kanashi-cat.jpg);
+    background-color: var(--primary-clr);
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    width: 100%;
 }
 
 .logo {
@@ -51,6 +62,7 @@ body {
 .title {
     font-size: 1.8em;
     flex: 1 0 auto;
+    text-align: center;
 }
 
 .pitch {
@@ -62,6 +74,37 @@ body {
 
 .content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray-clr);
+}
+
+.form  {
+    padding: var(--padding);
+    font-size: 0.7em;
+    width: min(80%, 200px);
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.form-row {
+    color: var(--gray-clr);
+    padding: calc(0.5*var(--padding)) 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row input[type='submit'] {
+    margin-top: 20px;
+}
+
+.registered {
+    font-size: 0.7em;
+    text-align: center;
+    margin: 10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -70,11 +113,8 @@ body {
     }
 
     .header {
-        background-image: url(images/kanashi-cat.jpg);
-        background-size: cover;
-        background-position: center;
         height: 100vh;
-        width: max(30%, 300px)
+        width: max(30%, 400px);
     }
 
     .logo-title {
@@ -82,6 +122,29 @@ body {
     }
 
     .content {
-        flex: 1;
+        height: 100vh;
+    }
+
+    .pitch {
+        min-height: 150px;
+        padding: calc(var(--padding) * 1.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-row {
+        flex: 0 1 100px;
+    }
+
+    .form {
+        padding: var(--section-padding);
+        width: min(90%, 400px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        row-gap: var(--padding);
+        column-gap: calc(1.5*var(--section-padding));
     }
 }
