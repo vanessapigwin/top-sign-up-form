@@ -36,6 +36,10 @@ a {
     text-decoration: none;
 }
 
+label {
+    margin: 6px 0;
+}
+
 .logo-title {
     display: flex;
     justify-content: center;
@@ -93,11 +97,11 @@ a {
     flex-direction: column;
     align-self: center;
     text-transform: uppercase;
+    gap: 20px;
 }
 
 .form-row {
     color: var(--gray-clr);
-    padding: calc(0.5*var(--padding)) 0;
     display: flex;
     flex-direction: column;
 }
@@ -113,6 +117,10 @@ button[type='submit'] {
     flex: none;
 }
 
+.form-row:focus-within {
+    background-color: var(--white-clr);
+}
+
 .form-row input {
     font-size: 1.2em;
     border: none;
@@ -122,9 +130,9 @@ button[type='submit'] {
     padding:4px 0;
 }
 
-.form-row input:hover {
+.form-row input:focus {
     background-color: var(--white-clr);
-    border-radius: 3px 3px 0 0;
+    outline: none;
 }
 
 .registered {
