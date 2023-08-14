@@ -76,16 +76,17 @@ label {
     text-align: center;
 }
 
-.pitch {
-    padding: var(--padding);
-    color: var(--gray-clr);
-    font-size: 1em;
-}
-
 .content {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.pitch {
+    padding: var(--padding);
+    color: var(--gray-clr);
+    font-size: 1em;
+    box-shadow: 0 5px 5px var(--border-clr);
 }
 
 .form  {
@@ -112,7 +113,7 @@ button[type='submit'] {
     border-radius: 8px;
     margin: 1.5em var(--padding) 0 var(--padding);
     background-color: var(--primary-clr);
-    padding: 8px;
+    padding: 10px 0;
     color: var(--white-clr);
     flex: none;
 }
@@ -154,11 +155,7 @@ button[type='submit']:active {
 
     .header {
         height: 100vh;
-        width: max(30%, 600px);
-    }
-
-    .logo-title {
-        background-color: rgba(255,255,255,0.5);
+        width: max(30%, 400px);
     }
 
     .content {
@@ -175,18 +172,51 @@ button[type='submit']:active {
     }
 
     .form {
-        padding: var(--section-padding) calc(0.5*var(--padding));
+        padding: var(--section-padding) 0 calc(0.5*var(--padding)) calc(0.5*var(--padding));
+        width: 70%
+    }
+
+    .registered {
+        margin: 0 calc(var(--padding) * 1.5);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body {
+        flex-direction: row;
+    }
+
+    .header {
+        height: 100vh;
+        width: max(30%, 600px);
+    }
+
+    .content {
+        height: 100vh;
+        width: 70%;
+    }
+
+    .pitch {
+        min-height: 20%;
+        padding: var(--padding) calc(var(--padding) * 1.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form {
+        padding: var(--section-padding) 0 calc(0.5*var(--padding)) calc(0.5*var(--padding));
         width: min(100%, 900px);
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-self: flex-start;
         row-gap: var(--padding);
-        column-gap: var(--section-padding);
     }
 
     .form-row {
-        flex: 0 1 300px;
+        flex: 0 1 350px;
     }
 
     button[type='submit'] {
@@ -197,6 +227,6 @@ button[type='submit']:active {
     .registered {
         margin: 0 calc(var(--padding) * 1.5);
         text-align: left;
-        max-width: 300px;
+        max-width: 350px;
     }
 }
