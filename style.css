@@ -225,7 +225,7 @@ button[type='submit']:active {
     }
 
     .registered {
-        margin: 0 calc(var(--padding) * 1.5);
+        margin: var(--padding) calc(var(--padding) * 1.5);
         text-align: left;
         max-width: 350px;
     }
