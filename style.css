@@ -124,21 +124,27 @@ button[type='submit']:active {
 }
 
 .form-row:focus-within {
+    font-weight: bold;
     background-color: var(--white-clr);
 }
 
-.form-row input {
+input {
     font-size: 1.2em;
     border: none;
     background-color: var(--light-gray-clr);
     border-bottom: solid 1px var(--border-clr);
     color:var(--gray-clr);
     padding:4px 0;
+    caret-color: var(--gray-clr);
 }
 
-.form-row input:focus {
+input:focus {
     background-color: var(--white-clr);
     outline: none;
+}
+
+input[required]:focus:invalid {
+    color: var(--action-clr);
 }
 
 .registered {
