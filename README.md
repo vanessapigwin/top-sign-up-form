@@ -1,10 +1,12 @@
 # Project: Sign-Up Form
 
+Live: https://vanessapigwin.github.io/top-sign-up-form/ 
+
 # Requirements
-- [ ] Copy design given
+- [x] Copy design given
 
 # Optional
-- [ ] Check that passwords fields match
+- [x] Check that passwords fields match
 
 ### Credits:
 Image Background: Photo by <a href="https://unsplash.com/@kanashi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kanashi</a> on <a href="https://unsplash.com/photos/BLW_KQ0Rkn0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
