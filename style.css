@@ -14,10 +14,6 @@
     --padding: 2em;
     --section-padding: 5em;
 }
-/* 
-* {
-    border: solid 1px red;
-} */
 
 body {
     background-color: var(--light-gray-clr);
@@ -105,6 +101,8 @@ label {
     display: flex;
     flex-direction: column;
     margin: 0 var(--padding);
+    padding: 4px 4px 0 4px;
+    border: solid 1px var(--light-gray-clr);
 }
 
 button[type='submit'] {
@@ -128,6 +126,16 @@ button[type='submit']:active {
     background-color: var(--white-clr);
 }
 
+.form-row:has(input:focus:invalid) {
+    color:var(--action-clr);
+    border: solid 0.5px var(--action-clr);
+}
+
+.form-row:has(input:focus:valid) {
+    color:var(--primary-clr);
+    border: solid 0.5px var(--primary-clr);
+}
+
 input {
     font-size: 1.2em;
     border: none;
@@ -143,8 +151,16 @@ input:focus {
     outline: none;
 }
 
+input:focus::placeholder {
+    color: transparent
+}
+
 input[required]:focus:invalid {
     color: var(--action-clr);
+}
+
+input[required]:focus:valid {
+    color: var(--primary-clr);
 }
 
 .registered {
